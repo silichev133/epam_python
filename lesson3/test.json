@@ -1,0 +1,10 @@
+{
+	CPU_usage: 100.0
+	RAM_total: 3121352704
+	SWAP_total: 1793060864
+	Network_information: {
+		lo: [snicaddr(family=<AddressFamily.AF_INET: 2>, address='127.0.0.1', netmask='255.0.0.0', broadcast=None, ptp=None), snicaddr(family=<AddressFamily.AF_INET6: 10>, address='::1', netmask='ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff', broadcast=None, ptp=None), snicaddr(family=<AddressFamily.AF_PACKET: 17>, address='00:00:00:00:00:00', netmask=None, broadcast=None, ptp=None)]
+		enp0s3: [snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.19.10.43', netmask='255.255.240.0', broadcast='10.19.15.255', ptp=None), snicaddr(family=<AddressFamily.AF_INET6: 10>, address='fe80::a00:27ff:fe3c:87a%enp0s3', netmask='ffff:ffff:ffff:ffff::', broadcast=None, ptp=None), snicaddr(family=<AddressFamily.AF_PACKET: 17>, address='08:00:27:3c:08:7a', netmask=None, broadcast='ff:ff:ff:ff:ff:ff', ptp=None)]
+
+	}
+}
