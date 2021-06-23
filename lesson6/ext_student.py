@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, name, lastname, birthdate, gender, grade, speciality, course_number):
+    def __init__(self, name, lastname, birthdate, gender, grade, spec, course_number):
         if len(name) < 25:
             self.__name = name
         else:
@@ -22,8 +22,8 @@ class Student:
         else:
             raise ValueError('Grade more than 10 or less than 0')
         
-        if len(speciality) < 50:
-            self.__speciality = speciality
+        if len(spec) < 50:
+            self.__spec = spec
         else:
             raise ValueError('Length more than 50')
 
@@ -56,22 +56,24 @@ class Student:
             self.__grade = gr
         else:
             raise ValueError('Grade more than 10 or less than 0')
-    @property
-    def speciality(self):
-        return self.__speciality
 
-    @speciality.setter
-    def speciality(self, sp):
-        if len(self.__speciality) < 50:
-            self.__speciality = sp
+    @property
+    def spec(self):
+        return self.__spec
+
+    @spec.setter
+    def spec(self, sp):
+        if len(self.__spec) < 50:
+            self.__spec = sp
         else:
             raise ValueError('Length more than 50')
+
     @property
     def course_number(self):
         return self.__course_number
 
     @course_number.setter
     def course_number(self, cn):
-        self.__course_number = cn
+        self.__course_number  = cn
 
 
