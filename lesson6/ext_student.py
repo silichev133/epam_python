@@ -1,3 +1,6 @@
+import string
+import random
+
 class Student:
     def __init__(self, name, lastname, birthdate, gender, grade, spec, course_number):
         if len(name) < 25:
@@ -76,4 +79,33 @@ class Student:
     def course_number(self, cn):
         self.__course_number  = cn
 
+students = []
+
+with open("students.dat", "r", encoding="utf-8-sig") as f:
+    lines = f.readlines()
+    for line in lines:
+        new_line = line.strip().split(':::')
+        new_line[4] = int(new_line[4])
+        new_line[6] = int(new_line[6])
+        students.append(new_line)
+
+class Student_login_pwd(Student):
+    def __init__(self, name, lastname, birthdate, gender, grade, spec, course_number):
+        super().__init__(name, lastname, birthdate, gender, grade, spec, course_number)
+        
+        #self.__login = self.name[0][0].lower() + self.lastname[1].lower()
+
+    @property
+    def pwd(self):
+        random_string = string.ascii_lowercase + string.ascii_uppercase + string.digits
+        rand_int = random.randint(6, 9)
+        pwd = ''
+
+        for i in range(rand_int):
+            pwd += random.choice(random_string)
+
+        return pwd
+    @property
+    def login(self):
+        return self.name[0][0].lower() + self.lastname.lower()
 
