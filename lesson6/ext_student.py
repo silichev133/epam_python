@@ -109,3 +109,14 @@ class Student_login_pwd(Student):
     def login(self):
         return self.name[0][0].lower() + self.lastname.lower()
 
+#loop to create multiple instances
+ext_students = []
+for i in range(len(students)):
+    ext_students.append(Student_login_pwd(*students[i]))
+
+#create ext_students.dat file with new information 
+with open("ext_students.dat", 'a') as f:
+    for i in range(len(ext_students)):
+        f.write(ext_students[i].name + '::' + ext_students[i].lastname + '::' + ext_students[i].birthdate + '::' + ext_students[i].gender
+                + '::' + str(ext_students[i].grade) + '::' + ext_students[i].spec + '::' + str(ext_students[i].course_number)
+                + '::' + ext_students[i].login + '::' + ext_students[i].pwd + '\n')
