@@ -54,7 +54,7 @@ class Matrix():
     def sub(a, b):
         c = a.body-b.body
         return c
-a=Matrix(2,2,[20, 30, 40, 50])
+a=Matrix(2,2,[20, 30, 40, 60])
 b=Matrix(2,2,[20, 30, 40, 50])
 print(a.is_zero())
 a.transpose()
