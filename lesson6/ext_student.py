@@ -121,4 +121,7 @@ with open("ext_students.dat", 'a') as f:
         f.write(ext_students[i].name + '::' + ext_students[i].lastname + '::' + ext_students[i].birthdate + '::' + ext_students[i].gender
                 + '::' + str(ext_students[i].grade) + '::' + ext_students[i].spec + '::' + str(ext_students[i].course_number)
                 + '::' + ext_students[i].login + '::' + ext_students[i].pwd + '\n')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5568428e9aa2dc55f5ebb592f6939555aa75b56f
